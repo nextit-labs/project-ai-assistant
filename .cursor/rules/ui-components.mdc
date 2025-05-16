@@ -1,0 +1,28 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+UI 컴포넌트 사용 표준 규칙
+- 모든 UI 컴포넌트는 @gsretail.com/gs-ui 패키지의 컴포넌트를 우선적으로 사용
+- MUI나 다른 UI 라이브러리의 컴포넌트를 직접 사용하지 않고, @gsretail.com/gs-ui의 래핑된 컴포넌트 사용
+- @gsretail.com/gs-ui에서 제공하지 않는 특수한 컴포넌트가 필요한 경우에만 components 디렉토리 하위에 Mui(@mui/material)를 사용한 커스텀 컴포넌트 생성
+
+올바른 사용 예시
+```typescript
+import { GsButton } from '@gsretail.com/gs-ui'
+import { GsTextField } from '@gsretail.com/gs-ui'
+import { GsDatePicker } from '@gsretail.com/gs-ui'
+```
+
+잘못된 사용 예시
+```typescript
+import { Button } from '@mui/material'
+import { TextField } from '@mui/material'
+import { DatePicker } from '@mui/x-date-pickers'
+```
+
+커스텀 컴포넌트 생성 시 참고할 템플릿:
+[prd-info-mis-filter.tsx](mdc:partner-front/partner-front/partner-front/partner-front/apps/web/src/features/product/prd-info-mis/ui/prd-info-mis-filter.tsx)
+
+

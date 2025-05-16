@@ -1,0 +1,46 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+### 프로젝트 개요
+- 레거시 JSP 프로젝트를 React로 컨버전
+- withgs: 레거시 프로젝트, partner-front: React 프로젝트
+
+### 기술 스택
+- TypeScript, React, Tanstack query, TanStack Router, Zustand
+- Tanstack table, Mui, emotion
+
+### 코드 스타일
+- 함수형 프로그래밍 패턴 사용
+- TypeScript 인터페이스 사용 (타입 대신)
+- 설명적인 변수명 사용 (예: isLoading, hasError)
+- 파일 구조: Component, SubComponent, helper function, types
+
+### 주요 컨벤션
+- 라우터: tanstack router 사용
+- 상태관리: Zustand (글로벌), Context (중간 공유)
+- UI: Shadcn UI, Radix UI, Tailwind
+- 검증: Zod
+- 테스트: Jest, React Testing Library
+
+### 성능 최적화
+- React Server Components(RSC) 우선 사용
+- 클라이언트 컴포넌트는 Suspense로 감싸기
+- 웹 바이탈리티:
+  - LCP: 2.5초 이내
+  - CLS: 0.1 이하
+  - FID: 100ms 이내
+
+### 에러 처리
+- 가드 절(guard clause) 사용
+- 에러 조건 초기 반환
+- 사용자 친화적인 에러 메시지
+- 커스텀 에러 타입 사용
+
+### 개발 프로세스
+1. 분석: 요구사항 및 제약조건 파악
+2. 계획: 아키텍처 및 솔루션 설계
+3. 구현: 단계별 개발
+4. 검토: 코드 리뷰 및 최적화
+5. 테스트: 단위/통합 테스트
